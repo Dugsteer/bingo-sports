@@ -1,84 +1,109 @@
-const menu = document.getElementById("menu");
-const sidey = document.getElementById("conto");
-const blue = window.matchMedia("(max-width: 800px)");
-const ghostly = document.getElementById("ghostly");
-
-
-function ghostify(){
-  ghostly.innerHTML === '<img src="./img/funpic1.png" alt="decorative">' ? 
-  ghostly.innerHTML = '<img src="./img/funpic2.png" alt="decorative">' : ghostly.innerHTML = '<img src="./img/funpic1.png" alt="decorative">';
-}
-
-function getNewCards(){
-location.reload();
-}
+// LOADER, SIDEBAR and ABOUT INFO
+const sidey = document.getElementById("sidebar");
 const loader = document.getElementById("loaderDiv");
+const extra = document.getElementById("info");
+const orange = document.getElementById("orange");
+const blue = window.matchMedia("(max-width: 800px)");
 
+// race car action
+// const car = document.getElementById("car");
+// const racing = new Audio("sounds/racing.mp3");
+// var isPlaying = false;
+
+// function addSpeed() {
+//   car.classList.toggle("runner");
+//   isPlaying ? racing.pause() : racing.play();
+// }
+
+// racing.onplaying = function () {
+//   isPlaying = true;
+// };
+// racing.onpause = function () {
+//   isPlaying = false;
+// };
+
+// racing.addEventListener(
+//   "ended",
+//   function () {
+//     racing.currentTime = 0;
+//     racing.play();
+//   },
+//   false
+// );
+
+// Show and hide about info
+function show() {
+  info.classList.toggle("xxc");
+}
+function unshow() {
+  info.classList.remove("xxc");
+}
+
+//Center the loader wherever the page is
+function checkForTop() {
+  loader.style.top = window.pageYOffset + "px";
+}
+checkForTop();
+
+//Manage the loader
 function stopLoader() {
   loader.classList.add("stop");
 }
-
-
-
-function startLoader(){
+function startLoader() {
   loader.classList.remove("stop");
   setTimeout(stopLoader, 1000);
 }
-
 setTimeout(stopLoader, 1000);
 
-
-
+//Stop the sidebar appearing on small screens with matchmedia
 function myFunction(x) {
   if (blue.matches) {
     sidey.classList.remove("block");
   }
 }
-
 function toggler() {
   sidey.classList.toggle("block");
 }
-
 myFunction(blue);
+
 
 //GENERAL SCRIPT
 
-
+function getNewCards(){
+  location.reload();
+  }
 
 var bingoArray = [
-  "bat.svg",
-  "bone.svg",
-  "broomstick.svg",
-  "candles.svg",
-  "candy.svg",
-  "cat.svg",
-  "cauldron.svg",
-  "clown.svg",
-  "coffin.svg",
-  "death.svg",
-  "fancy-dress.svg",
-  "fangs.svg",
-  "frankenstein.svg",
-  "ghost.svg",
-  "grave.svg",
-  "halloween.svg",
-  "hat.svg",
-  "monster.svg",
-  "moon.svg",
-  "mummy.svg",
-  "pirate.svg",
-  "pumpkin.svg",
-  "skeleton.svg",
-  "skull.svg",
-  "spell.svg",
-  "spider.svg",
-  "vampire.svg",
-  "wand.svg",
-  "web.svg",
-  "werewolf.svg",
-  "witch.svg",
-  "wizard.svg",
-  "zombie.svg",
+  "archery.svg",
+"badminton.svg",
+"basketball.svg",
+"boxing.svg",
+"climbing.svg",
+"cycling.svg",
+"diving.svg",
+"driving.svg",
+"football.svg",
+"golf.svg",
+"gymnastics.svg",
+"hang-gliding.svg",
+"hiking.svg",
+"hockey.svg",
+"horse-riding.svg",
+"ice-skating.svg",
+"karate.svg",
+"kayak.svg",
+"paddle-surf.svg",
+"rugby.svg",
+"running.svg",
+"sailing.svg",
+"skiing.svg",
+"surfing.svg",
+"swimming.svg",
+"table-tennis.svg",
+"tennis.svg",
+"weight-lifting.svg",
+"windsurfing.svg",
+"yoga.svg",
 ];
 
 function shuffle(bingoArray) {
@@ -340,22 +365,3 @@ function pastePics5() {
   ).innerHTML = `<img src="img/${brownArray[11]}">`;
 }
 
-function printdiv() {
-  var headstr = "BINGO CARDS";
-  var footstr = "More bingo at www.esl-ology.com";
-  var newstr = document.getElementById("container").innerHTML;
-  var oldstr = document.body.innerHTML;
-  document.body.innerHTML = headstr + newstr + footstr;
-  window.print();
-  document.body.innerHTML = oldstr;
-  return false;
-}
-
-
-//TOGGLE SIDEBAR
-
-// const sideBar = document.getElementById("infobox");
-
-// function openSidebar() {
-//   sideBar.classList.toggle("moveinfobox");
-// }

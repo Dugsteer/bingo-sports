@@ -1,41 +1,43 @@
 .links {
     grid-row: 3/4;
     grid-column: 2/3;
-    width: 700px;
-    height: 420px;
+    width: 800px;
+    height: auto;
     display: flex;
     flex-direction:column;
     align-items: center;
     justify-self: center;
     text-align: center;
-    margin: 4rem 0;
+    border-radius: 5px;
+    margin: 2rem 0;
+    margin-bottom: 4rem;
     padding: 2rem 0rem;
-    background-color: $color-halloween-white;
+    background-color: #fff;
     justify-content: flex-start;
     box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
 
     @media only screen and (max-width:$bp-large){
-        width: 600px;
-        height: 400px;
+        width: 700px;
+        height: auto;
         
        }
     @media only screen and (max-width:$bp-small){
         justify-content: center;
         width: 400px;
-        height: 300px;
+        height: auto;
         
        }
     @media only screen and (max-width:$bp-smallest){
         justify-content: center;
-        width: 350px;
-        height: 270px;
+        width: 360px;
+        height: auto;
         
        }
 
 &__text {
+    margin: 2rem;
     margin-bottom: 3rem;
-    margin-top: 2rem;
-    color: $color-halloween-background;
+    color: $color-blue;
     font-size: 2rem;
      
  }
@@ -48,19 +50,18 @@
         width: 40%;
 
         & img {
-            width: 90%;
-            box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+            width: 100%;
+            box-shadow: 3px 3px 3px rgba(0,0,0,.4);
 
             &:hover {
-                transform: scale(1.02) translateY(2px);
-                box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+                transform: scale(.98) translateY(1px);
             }
         }
 
         & figcaption {
             margin-top: 1rem;
             margin-bottom: 2rem;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             text-align: center;
         }
 
