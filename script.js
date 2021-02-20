@@ -5,32 +5,6 @@ const extra = document.getElementById("info");
 const orange = document.getElementById("orange");
 const blue = window.matchMedia("(max-width: 800px)");
 
-// race car action
-// const car = document.getElementById("car");
-// const racing = new Audio("sounds/racing.mp3");
-// var isPlaying = false;
-
-// function addSpeed() {
-//   car.classList.toggle("runner");
-//   isPlaying ? racing.pause() : racing.play();
-// }
-
-// racing.onplaying = function () {
-//   isPlaying = true;
-// };
-// racing.onpause = function () {
-//   isPlaying = false;
-// };
-
-// racing.addEventListener(
-//   "ended",
-//   function () {
-//     racing.currentTime = 0;
-//     racing.play();
-//   },
-//   false
-// );
-
 // Show and hide about info
 function show() {
   info.classList.toggle("xxc");

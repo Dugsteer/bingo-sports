@@ -1,23 +1,17 @@
 @font-face {
-	font-family: 'Creepster';
-	src: url('../fonts/Creepster-Regular.ttf'); 
-	src: 
-		local('Creepster-Regular'),
-		format('truetype');
+  font-family: "Creepster";
+  src: url("../fonts/Creepster-Regular.ttf");
+  src: local("Creepster-Regular"), format("truetype");
 }
 @font-face {
-	font-family: 'Headhunter';
-	src: url('../fonts/Headhunter-Regular.ttf'); 
-	src: 
-		local('Headhunter-Regular'),
-		format('truetype');
+  font-family: "Headhunter";
+  src: url("../fonts/Headhunter-Regular.ttf");
+  src: local("Headhunter-Regular"), format("truetype");
 }
 @font-face {
-	font-family: 'password';
-	src: url('../fonts/password.ttf'); 
-	src: 
-		local('password'),
-		format('truetype');
+  font-family: "password";
+  src: url("../fonts/password.ttf");
+  src: local("password"), format("truetype");
 }
 
 *,
@@ -33,10 +27,10 @@
 html {
   font-size: 62.5%; //1rem = 10px; 10px/16px default = 62.5%;
 
-  @media only screen and (max-width:$bp-large) {
+  @media only screen and (max-width: $bp-large) {
     font-size: 50%;
   }
-  
+
   // @media only screen and (max-width:$bp-smallest){
   //  font-size: 40%;
   // }
@@ -48,34 +42,32 @@ body {
   height: auto;
   overflow-x: hidden;
   background-color: rgb(224, 226, 225);
-
-
- }
+}
 
 @media print {
-
-  html, body {
-    height:100%; 
-    margin: 0 !important; 
+  html,
+  body {
+    height: 100%;
+    margin: 0 !important;
     padding: 0 !important;
     overflow: hidden;
   }
   .container {
-    content: 'My Window';
+    content: "My Window";
     background-color: white;
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        padding: 15px;
-        grid-template-rows: 520px 520px 520px;
-        grid-template-columns: 520px 520px;
-        font-size: 14px;
-        line-height: 18px;
-        overflow: hidden;
-
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 15px;
+    grid-template-rows: 520px 520px 520px;
+    grid-template-columns: 520px 520px;
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden;
+    z-index: 20;
   }
 }
